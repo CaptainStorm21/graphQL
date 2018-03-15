@@ -1,0 +1,14 @@
+1. npm init 
+2. npm install --save express nodemon
+3. npm install --save-dev babel-cli babel-preset-env babel-preset-stage-0 
+//babel-preset-stage-0  covers the latest es7 
+4. open package.json
+5. add in "script" section 
+
+             "scripts": {
+                    "test": "echo \"Error: no test specified\" && exit 1",
+                    "start": "nodemon ./index.js --exec babel-node -e js"
+                },
+6. create .babelrc file (see the file)
+7.create index.js file (see the file)
+8. now let's run the index.js --- npm start
