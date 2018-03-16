@@ -45,3 +45,34 @@ Basics schema
 let's open a file schema.js and add keys and properties
 once you add alll the keys and values open index.js and  add return with keys. open a file index.js 
 once you modify both files, save and rerun the server or just go to localhost:8080/graphql and open left side
+
+here you only modify schema.js and index.js files 
+
+ part 3 is done
+
+In part 4 we are dealing with types of data ... 
+
+if you open schema.js, you will see that each key has a type of data it accepts
+
+    type Employee {
+        id: ID
+        firstName: String
+        lastName: String
+        position: String
+        gender: String
+        language: String
+        emails: [Email]!
+    }
+
+now, you see somethign strange .. why is emails : has [ ]!
+we are telling schema file that emails field is a must to be filled out and it may have more than 1 email
+
+we see that in index.js 
+        "emails": [
+            {email: "hello@hello.com"},
+            {email: "hello3@hello.com"}
+    ],
+    }
+
+part 5 
+query and mutation
