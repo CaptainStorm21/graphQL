@@ -23,7 +23,10 @@ const root= { employee: () => {
         "position": "CEO",
         "gender": "M",
         "language": "English",
-        "email": "john.doe@doeville.com",
+        "emails": [
+            {email: "hello@hello.com"},
+            {email: "hello3@hello.com"}
+    ],
     }
 
 } };
