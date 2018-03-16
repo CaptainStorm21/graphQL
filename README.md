@@ -76,3 +76,48 @@ we see that in index.js
 
 part 5 
 query and mutation
+so we learned how to pull the data out of built in db now we need to figure out how to create a random unique id 
+and how do you add data into db 
+
+open index.js
+class Employee {
+    constructor(id, { firstName, lastName, gender, language, email }) {
+        this.id = id;
+        this.firstName = firstName;
+        this.lastName = lastName;
+        this.gender= gender;
+        this.language = language;
+        this.email  = email ;
+    }
+}
+
+then add const EmployeedDatabase = {};
+we need to add all the input into EmployeDatabase object
+
+in order to generate a unique ID you add this code 
+createEmployee: ({input}) => {
+    let id = require('crypto'). randomBytes(10).toString('hex');
+    EmployeedDatabase[id]=input;
+    return new Employee(id, input);
+}
+
+restart localhost:8080/graphql
+and add this
+
+mutation {
+  createEmployee(input:{
+    firstName:"Josh",
+    lastName: "Graban",
+    gender: "M",
+    email:"meme@meememe.com"
+  }){
+    id
+    firstName
+    lastName
+    gender
+    
+  }
+}
+
+
+
