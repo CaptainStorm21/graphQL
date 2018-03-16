@@ -1,4 +1,3 @@
-# graphQL
 1. npm init 
 2. npm install --save express nodemon
 3. npm install --save-dev babel-cli babel-preset-env babel-preset-stage-0 
@@ -27,5 +26,16 @@ you are done with  part 1.
     npm install --save express-graphql graphql or just grab my packa.json file and run npm install
 6. see all the changes from part 1 to part 2 
 7. if you have stopped your server restart it then go to http://localhost:8080/graphql you should see a welcome screen
+8. remove everything from left side and add this 
+
+query {
+  hello,
+}
+9. click on arrow  and you should see 
+{
+  "data": {
+    "hello": "Hi. I am GRAPHQL!"
+  }
+}
 
 YAY! part 2 is done
