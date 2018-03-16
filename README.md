@@ -39,3 +39,9 @@ query {
 }
 
 YAY! part 2 is done
+
+Basics schema
+
+let's open a file schema.js and add keys and properties
+once you add alll the keys and values open index.js and  add return with keys. open a file index.js 
+once you modify both files, save and rerun the server or just go to localhost:8080/graphql and open left side
