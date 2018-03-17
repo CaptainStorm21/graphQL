@@ -1,3 +1,4 @@
+create a folder mkdir graphql101 or something like that but not graphql
 1. npm init 
 2. npm install --save express nodemon
 3. npm install --save-dev babel-cli babel-preset-env babel-preset-stage-0 
