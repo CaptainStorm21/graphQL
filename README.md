@@ -120,6 +120,9 @@ mutation {
   }
 }
 
+part 6
+here we will be breaking files in into separate files and we will be learning about a resolver
+
 part7
 let's add specific data type 
 
@@ -135,6 +138,26 @@ and dont forget to add age in resolver.js
         this.age = age;
 Go back to localhost:8080/graphQL and add age as an empty field with data and rerun the task.
 
-we are done here! next topic is Enums!
 
+part8 
+we are done here! next topic is Enums!
+here we will give only gender 2 choices 
+for that we need Enums
+
+open schema.js 
+inside of const schema add 
+
+ //enum      
+        gender: Gender
+        language: String
+        emails: String
+        age: Int
+
+    }
+    
+Step 2.     
+    Change from gender: String to  gender: Gender
+    You should have them in both 
+
+you are done with part 8!
 
