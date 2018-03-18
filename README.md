@@ -154,10 +154,55 @@ inside of const schema add
         age: Int
 
     }
-    
+
 Step 2.     
     Change from gender: String to  gender: Gender
     You should have them in both 
 
-you are done with part 8!
+Part 9 --- adding multiple values
+
+let's say you have a field Contacts and you need to have an ability to create multiple contacts 
+you will need to open schema.js and resolvers.js 
+
+The idea is create an empty array within const schema, then specify the type Contact you need 
+Then, add  contacts: [Contact] witnin input EmployeeInput
+Then add contacts parameter to constructor in resolves.js, add this.contacts = contacts
+
+Now you can add fields in graphQL
+
+your GraphQL on local server should look something like this 
+            mutation {
+            createEmployee(input:{
+                firstName:"Josh",
+                lastName: "Groban",
+                    gender: MALE
+                email:"meme@meememe.com",
+                age: 34,
+                contacts: [
+                { firstName: "Mary", lastName: "Jones"},
+                { firstName: "Kate", lastName: "Wilson"}
+                ]
+            })
+                {
+                id
+                firstName
+                lastName
+                gender
+                age
+                contacts {
+                firstName
+                lastName
+                }
+                
+            }
+            }
+if you click on documentation link on your right  hand side you should not see any errors.
+
+
+// lets add more tools to work with graphQL 
+
+open your terminal
+    npm install --save graphql-tools
+    there are a few changes are done across all files so please open them up and modify them
+    we are making these changes so we can work with MongoDB and other NOSQL tools! 
 
