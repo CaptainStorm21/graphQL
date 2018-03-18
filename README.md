@@ -120,5 +120,21 @@ mutation {
   }
 }
 
+part7
+let's add specific data type 
+
+field age. we know it is interger so open your 
+schema.js and add to const schema         
+            age: Int
+
+and input EmployeeInput
+           age: Int
+
+and dont forget to add age in resolver.js
+        class Employee inside of a constructor add age parameter and 
+        this.age = age;
+Go back to localhost:8080/graphQL and add age as an empty field with data and rerun the task.
+
+we are done here! next topic is Enums!
 
 
