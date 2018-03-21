@@ -1,3 +1,7 @@
+
+GraphQL is a data query language
+
+
 create a folder mkdir graphql101 or something like that but not graphql
 1. npm init 
 2. npm install --save express nodemon
