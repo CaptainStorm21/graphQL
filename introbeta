@@ -1,0 +1,239 @@
+with graphQL we define a query 
+
+
+
+a query looks like JSON object without the values
+
+
+
+then we send the query as a string to graphql server
+
+
+
+
+
+
+
+
+
+
+
+query 
+
+
+
+{
+
+
+
+state {
+
+
+
+name
+
+
+
+population
+
+
+
+people
+
+
+
+}
+
+
+
+}
+
+
+
+
+
+
+
+response
+
+
+
+{  
+
+
+
+   "data":{  
+
+
+
+      "state":{  
+
+
+
+         "name":"Ohio",
+
+
+
+         "population":900
+
+
+
+         "people": [...]
+
+
+
+      }
+
+
+
+   }
+
+
+
+}
+
+
+
+
+
+
+
+
+
+
+
+Advantages of GRAPHQL
+
+
+
+avoids multiple REST calls
+
+
+
+backwards comparable and version-free
+
+
+
+can be wrapped around existing API
+
+
+
+it is language agnostic
+
+
+
+
+
+
+
+
+
+///log into your github
+
+go to https://developer.github.com/v4/explorer/
+
+add this to the left handside
+
+{
+
+  #First Query
+
+  viewer{
+
+    name
+
+  }
+
+}
+
+
+
+click on button and you will see
+
+{
+
+  "data": {
+
+    "viewer": {
+
+      "name": "your name"
+
+    }
+
+  }
+
+}
+
+
+
+//hold control and spacebar
+
+
+
+{
+
+  #First Query
+
+  viewer{
+
+    name
+
+    bio
+
+    email
+
+    id
+
+    company
+
+    avatarUrl
+
+  }
+
+}
+
+
+
+{
+
+  "data": {
+
+    "viewer": {
+
+      "name": "Captain Storm",
+
+      "bio": "",
+
+      "email": "",
+
+      "id": "MDQ6VXNlcjE5OTg5MTQx",
+
+      "company": "",
+
+      "avatarUrl": "https://avatars1.githubusercontent.com/u/19989141?v=4"
+
+    }
+
+  }
+
+}
+
+
+
+
+
+
+
+{
+
+  repositoryOwner(login: "CaptainStorm21") {
+
+    id
+
+    resourcePath
+
+    url
+
+  }
+
+}
